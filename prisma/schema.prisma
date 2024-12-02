@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model tbl_users {
+  id         Int     @id @default(autoincrement())
+  username   String? @unique
+  realname   String?
+  password   String?
+  ip         String?
+  lastlogin  BigInt
+  x          Float   @default(0)
+  y          Float   @default(0)
+  z          Float   @default(0)
+  world      String
+  regdate    BigInt
+  regip      String
+  yaw        Float
+  pitch      Float
+  email      String?
+  isLogged   Int
+  hasSession Int
+  totp       String?
+  point      Float   @default(0.00)
+  role       String  @default("user")
+  status     String  @default("true")
+}
+
+model tbl_slide {
+  id    Int    @id @default(autoincrement())
+  image String?
+}
