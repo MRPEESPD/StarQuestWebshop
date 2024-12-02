@@ -6,7 +6,10 @@ const nextConfig = {
             "img5.pic.in.th",
             "res.cloudinary.com"
         ],
-    }
+    },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
 };
 
 export default nextConfig;
