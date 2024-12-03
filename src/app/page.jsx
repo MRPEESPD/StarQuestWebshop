@@ -47,23 +47,27 @@ const page = () => {
         <div className="grid lg:grid-cols-2 gap-6 sm:grid-rows-1">
           <Link href='/shop'>
             <div className="bg-[rgb(40,40,40)]/[0.36] py-0 px-10 border border-gray-50/50 rounded-lg text-white cursor-pointer hover:scale-[102%] duration-200 transition-all shadow">
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center h-[100px] lg:h-[150px] md:h-[120px]">
                 <div>
-                  <h1 className="text-xl">ร้านค้า</h1>
-                  <h1 className="text-gray-50/50">ดูสินค้าทั้งหมด</h1>
+                  <h1 className="text-[20px] lg:text-xl md:text-xl sm:text-md">ร้านค้า</h1>
+                  <h1 className="text-gray-50/50 md:text-[16px] text-sm">ดูสินค้าทั้งหมด</h1>
                 </div>
-                <Image src={Shop} alt='shop' width={200} height={200} />
+                <div className="">
+                  <Image src={Shop} alt='shop' width={200} height={200} className="w-[82px] h-[70px] lg:w-[120px] lg:h-[100px]" />
+                </div>
               </div>
             </div>
           </Link>
           <Link href='/topup'>
             <div className="bg-[rgb(40,40,40)]/[0.36] py-0 px-10 border border-gray-50/50 rounded-lg text-white cursor-pointer hover:scale-[102%] duration-200 transition-all shadow">
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center h-[100px] lg:h-[150px] md:h-[120px]">
                 <div>
-                  <h1 className="text-xl">เติมเงิน</h1>
-                  <h1 className="text-gray-50/50">เติมเงินเพื่อซื้อสินค้า</h1>
+                  <h1 className="text-[20px] lg:text-xl md:text-xl sm:text-md">เติมเงิน</h1>
+                  <h1 className="text-gray-50/50 md:text-[16px] text-sm">เติมเงินเพื่อซื้อสินค้า</h1>
                 </div>
-                <Image src={Topup} alt='shop' width={200} height={200} />
+                <div className="">
+                <Image src={Topup} alt='shop' width={200} height={200} className="w-[70px] h-[70px] lg:w-[100px] lg:h-[100px]" />
+                </div>
               </div>
             </div>
           </Link>
